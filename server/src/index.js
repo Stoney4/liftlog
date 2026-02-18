@@ -9,6 +9,10 @@ const app = express();
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
+app.get("/", (req, res) =>{
+  res.json({ok : true, message: "LiftLog API is running..."})
+});
+
 app.get("/api/health", (req, res) => {
   res.json({ ok: true, message: "LiftLog API is running" });
 });
