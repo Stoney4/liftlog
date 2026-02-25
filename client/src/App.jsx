@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import Header from './components/Header.jsx'
+import Body from "./components/Body.jsx";
 
 export default function App() {
   const [msg, setMsg] = useState("Loading...");
@@ -16,7 +17,10 @@ export default function App() {
     <>
       <div>
         <Header/>
-        </div>
-        </>
+      </div>
+      <div>
+        <Body/>
+      </div>
+    </>
   );
 }

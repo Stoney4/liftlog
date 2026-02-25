@@ -1,53 +1,62 @@
 // Header.jsx
 
-import React from "react";
+import { headerStyles } from "./styles";
 
-const Header = () => {
+export default function Header() {
   return (
-    <header>
-      <div className="logosec">
-        <div className="logo">Liftlog</div>
+    <header style={headerStyles.header}>
+      <div style={headerStyles.logosec}>
+        <div style={headerStyles.logo}>LiftLog</div>
 
         <img
-          src="public/weight-logo.svg"
-          className="icn menuicn"
-          id="menuicn"
+          src="/weight-logo.svg"
+          style={{ ...headerStyles.icn, ...headerStyles.menuicn }}
           alt="menu-icon"
         />
       </div>
 
+    <div style={headerStyles.navBox}>
+      <div style={headerStyles.navBoxSec}>
+          <div style={headerStyles.navItem}>Dashboard</div>
+            <div style={headerStyles.navItem}>Workouts</div>
+            <div style={headerStyles.navItem}>Exercises</div>
+          </div>
+      </div>
 
-      <div className="searchbar">
-        <input type="text" placeholder="Search" />
 
-        <div className="searchbtn">
+{/*       <div style={headerStyles.searchbar}>
+        <input
+          type="text"
+          placeholder="Search"
+          style={headerStyles.searchInput}
+        />
+
+        <div style={headerStyles.searchBtn}>
           <img
-            src="public/search-2903.svg"
-            className="icn srchicn"
+            src="/search-2903.svg"
+            style={headerStyles.icn}
             alt="search-icon"
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="message">
-        <div className="circle"></div>
+      <div style={headerStyles.message}>
+        <div style={headerStyles.circle}></div>
 
         <img
-          src="public/notification-bell-5743.svg"
-          className="icn"
+          src="/notification-bell-5743.svg"
+          style={headerStyles.icn}
           alt="notifications"
         />
 
-        <div className="dp">
+        <div style={headerStyles.dp}>
           <img
-            src="public/man-muscles-and-fitness-16863.svg"
-            className="dpicn"
+            src="/man-muscles-and-fitness-16863.svg"
             alt="dp"
+            style={{ height: "400%" }}
           />
         </div>
       </div>
     </header>
   );
-};
-
-export default Header;
+}
